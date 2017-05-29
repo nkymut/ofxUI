@@ -1670,6 +1670,25 @@ ofxUIToggleMatrix* ofxUICanvas::addToggleMatrix(string _name, int _rows, int _co
     return widget;
 }
 
+ofxUILabelToggleMatrix* ofxUICanvas::addLabelToggleMatrix(string _name, int _rows, int _cols) {
+   float dim = globalButtonDimension;
+   float width = rect->getWidth()-widgetSpacing*2;
+   if(_cols*dim+_cols*padding > width)
+   {
+      dim = (width-(_cols-1)*padding)/_cols;
+   }
+   ofxUILabelToggleMatrix* widget = new ofxUILabelToggleMatrix(dim, dim, _rows, _cols, _name);
+   addWidgetPosition(widget, widgetPosition, widgetAlign);
+   return widget;
+}
+
+ofxUILabelToggleMatrix* ofxUICanvas::addLabelToggleMatrix(string _name, int _rows, int _cols, float w, float h) {
+   ofxUILabelToggleMatrix* widget = new ofxUILabelToggleMatrix(w, h, _rows, _cols, _name);
+   addWidgetPosition(widget, widgetPosition, widgetAlign);
+   return widget;
+}
+
+
 ofxUI2DPad* ofxUICanvas::add2DPad(string _name, ofxUIVec3f _rangeX, ofxUIVec3f _rangeY, ofxUIVec3f _value) {
     float dim = rect->getWidth()-widgetSpacing*2;
     ofxUI2DPad* widget = new ofxUI2DPad(_name, _rangeX, _rangeY, _value, dim, dim, 0, 0);

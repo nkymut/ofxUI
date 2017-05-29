@@ -49,6 +49,8 @@
 #include "ofxUIDragableLabelButton.h"
 #include "ofxUISortableList.h"
 #include "ofxUIToggleMatrix.h"
+#include "ofxUILabelToggleMatrix.h"
+
 #include "ofxUIImageButton.h"
 #include "ofxUIImageToggle.h"
 #include "ofxUIRotarySlider.h"

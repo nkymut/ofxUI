@@ -191,6 +191,15 @@ public:
     
     ofxUIToggleMatrix* addToggleMatrix(string _name, int _rows, int _cols);
     ofxUIToggleMatrix* addToggleMatrix(string _name, int _rows, int _cols, float w, float h);
+   
+   ofxUILabelToggleMatrix* addLabelToggleMatrix(string _name, int _rows, int _cols);
+   ofxUILabelToggleMatrix* addLabelToggleMatrix(string _name, int _rows, int _cols, float w, float h);
+   
+//   ofxUIToggleMatrix* addButtonMatrix(string _name, int _rows, int _cols);
+//   ofxUIToggleMatrix* addButtonMatrix(string _name, int _rows, int _cols, float w, float h);
+//   
+//   ofxUIToggleMatrix* addLabelButtonMatrix(string _name, int _rows, int _cols);
+//   ofxUIToggleMatrix* addLabelButtonMatrix(string _name, int _rows, int _cols, float w, float h);
 
     ofxUI2DPad* add2DPad(string _name, ofxUIVec3f _rangeX, ofxUIVec3f _rangeY, ofxUIVec3f _value);
     ofxUI2DPad* add2DPad(string _name, ofxUIVec3f _rangeX, ofxUIVec3f _rangeY, ofxUIVec3f _value, float w, float h, float x = 0, float y = 0);
